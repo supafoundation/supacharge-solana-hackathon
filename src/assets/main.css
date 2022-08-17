@@ -1,0 +1,179 @@
+@import './base.css';
+
+#app {
+    width: 100%;
+}
+
+#apps {
+    max-width: 1280px;
+
+    margin: 0 auto;
+    padding: 2rem;
+
+    font-weight: normal;
+}
+
+a,
+.green {
+    text-decoration: none;
+    color: #2169fb;
+    transition: 0.4s;
+}
+
+.purple {
+    text-decoration: none;
+    background: -webkit-linear-gradient(
+        left,
+        #2169fb 47%,
+        #fefefe 25%,
+        #fefefe 27%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    transition: 0.4s;
+}
+
+@media (hover: hover) {
+    a:hover {
+        background-color: hsla(160, 100%, 37%, 0.2);
+    }
+}
+
+@media (min-width: 1024px) {
+    body {
+        display: flex;
+        place-items: center;
+    }
+    .purple {
+        text-decoration: none;
+        background: -webkit-linear-gradient(
+            left,
+            #2169fb 45%,
+            #fefefe 42%,
+            #fefefe 22%
+        );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+
+        transition: 0.4s;
+    }
+    #apps {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        padding: 0 0.5rem;
+    }
+}
+
+h4 {
+    font-size: 1rem;
+    top: -5px;
+    color: #fefefe;
+}
+
+.swv-dropdown {
+    position: absolute !important;
+    z-index: 20;
+}
+
+.n-button.add-room {
+    position: absolute !important;
+    z-index: 20;
+}
+
+@media only screen and (max-width: 768px) {
+    .swv-dropdown {
+        margin: 6px 0px 0px 73% !important;
+    }
+    .n-button.add-room {
+        top: 12px;
+        left: 89%;
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    .swv-dropdown {
+        /* left: 0; */
+        left: 6%;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 899px) {
+    .swv-dropdown {
+        left: 78%;
+        top: 8px;
+    }
+
+    .n-button.add-room {
+        left: 88%;
+        top: 14px;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    .swv-dropdown {
+        left: 0;
+        top: 18px;
+        margin-left: 17.3%;
+    }
+
+    .n-button.add-room {
+        left: 21.9%;
+        top: 24px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .swv-dropdown {
+        left: 0;
+        top: 18px;
+        margin-left: 18%;
+    }
+
+    .n-button.add-room {
+        left: 21.9%;
+        top: 24px;
+    }
+}
+
+.btn-wallet-chat .vac-room-container .vac-room-name {
+    padding-top: 5%;
+    padding-left: 20px !important;
+}
+
+.btn-wallet-chat .vac-room-container .vac-room-name {
+    padding-top: 5%;
+    padding-left: 20px !important;
+}
+
+.btn-wallet-chat .swv-button-trigger {
+    background-color: transparent !important;
+}
+
+.btn-wallet-chat.swv-button-trigger {
+    background-color: transparent !important;
+}
+
+.btn-wallet-chat .swv-button > p {
+    display: none !important;
+}
+
+.vac-title-container {
+    padding-left: 9% !important;
+}
+
+.vac-format-message-wrapper .vac-text-ellipsis {
+    padding-left: 5% !important;
+}
+
+.vac-room-header .vac-toggle-button {
+    display: none;
+}
+
+.vac-box-search .vac-add-icon {
+    display: none;
+}
+
+.vac-box-footer .vac-icon-textarea-left {
+    display: none;
+}
