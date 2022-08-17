@@ -22,7 +22,7 @@ export default defineConfig({
         target: 'es2020',
     },
     define: {
-        'process.env': {}
+        'process.env': { ANCHOR_BROWSER: true}
 
           
     },
