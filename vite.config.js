@@ -22,10 +22,11 @@ export default defineConfig({
         target: 'es2020',
     },
     define: {
-        
-            'process.env.ANCHOR_BROWSER': true
+        'process.env': {}
+
           
     },
+    
     optimizeDeps: {
         esbuildOptions:{
             target:'es2020'

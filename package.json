@@ -2,7 +2,7 @@
     "name": "sol-hackathon",
     "version": "0.0.0",
     "scripts": {
-        "build": "vite build",
+        "build": "vite build --debug",
         "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore",
         "dev": "vite --host 0.0.0.0",
         "preview": "vite preview --port 4173"
@@ -18,7 +18,6 @@
         "bs58": "^5.0.0",
         "centrifuge": "^3.0.1",
         "dayjs": "^1.11.5",
-        "firebase": "^9.9.2",
         "jwt-decode": "^3.1.2",
         "naive-ui": "^2.32.1",
         "pinia": "^2.0.16",

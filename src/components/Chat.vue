@@ -233,11 +233,9 @@ import { AddCircle as AddIcon } from '@vicons/ionicons5';
 import { useStore } from '../stores';
 import { PublicKey } from '@solana/web3.js';
 import _ from 'underscore';
-// firebase
 
-import * as firestoreService from '@/database/firestore';
-import * as firebaseService from '@/database/firebase';
-import * as storageService from '@/database/storage';
+
+
 import { parseTimestamp, formatTimestamp } from '@/utils/dates';
 import { useWallet } from 'solana-wallets-vue';
 import jwt_decode from 'jwt-decode';
