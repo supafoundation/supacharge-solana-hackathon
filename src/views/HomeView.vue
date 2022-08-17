@@ -134,14 +134,13 @@ const commitment = 'confirmed'
     })
 
     async function signIn(){
-console.log((/^[a-zA-Z0-9_]{3,15}$/.test(inputValue.value) && !store.disconnecting)?store.wallet?.publicKey.toBase58():"error") 
 let timestampNow=Math.floor(Date.now() / 1000);
 const message = `I am signing in as ${inputValue.value} and providing a signature to allow solana-hackathon.supacharge.io to validate my wallet ${store.wallet?.publicKey.toBase58()} at timestamp: ${timestampNow}`
 const encodedMessage = new TextEncoder().encode(message);
 const signedMessage = await store.signMessage(encodedMessage, "utf8"); 
 let payload = {walletAddress: store.wallet?.publicKey.toBase58(), timestamp: timestampNow, walletSignature: bs58.encode(signedMessage), domain:'solana-hackathon.supacharge.io', nickname: inputValue.value};
 
-    console.log(payload)  
+
 
 
 fetch("https://solana-hackathon-api.supacharge.io:3000/signin",
@@ -151,7 +150,8 @@ fetch("https://solana-hackathon-api.supacharge.io:3000/signin",
    headers: {'Content-Type': 'application/json'},
 
 })
-.then(function(res){ return res.json(); })
+.then(function(res){ 
+  return res.json(); })
 .then(function(data){ 
     for(let j=0; j<data.nftList.length; j++){
         fetch(data.nftList[j].uri).then(res => {

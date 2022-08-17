@@ -240,7 +240,7 @@ import { parseTimestamp, formatTimestamp } from '@/utils/dates';
 import { useWallet } from 'solana-wallets-vue';
 import jwt_decode from 'jwt-decode';
 import { Centrifuge } from 'centrifuge';
-import * as dayjs from 'dayjs';
+import dayjs from 'dayjs';
 
 export default defineComponent({
     name: 'ChatS',
@@ -365,7 +365,6 @@ export default defineComponent({
             const deleteAttach = document.querySelector(
                 '.vac-icon-textarea > div.vac-svg-button'
             );
-            console.log('cek deleteAttach: ', deleteAttach);
             if (deleteAttach) {
                 deleteAttach.remove();
             }
@@ -421,14 +420,12 @@ export default defineComponent({
             listeners.value = [];
         };
         const fetchMessages = async ({ room, options = {} }) => {
-            console.log(room);
             currentRoom.value = room;
             messages.value = [];
             if (!room.name.includes('DM#')) {
                 centrifugo.history(room.roomId, { limit: 30 }).then(
                     function (resp) {
                         resp.publications.forEach((message) => {
-                            console.log(message);
                             const formattedMessage = formatMessage(
                                 room,
                                 message.data.text
@@ -919,6 +916,8 @@ export default defineComponent({
                             ctx.data.text
                         );
                         messages.value.push(formattedMessage);
+                        messages.value = [...new Map(messages.value.map( o => [JSON.stringify(o), o])).values()];
+
                          messagesLoaded.value=true;
 
                 
