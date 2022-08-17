@@ -662,7 +662,7 @@ export default defineComponent({
             centrifugo.disconnect();
 
             let payload = { contractAddress: collectionsRef.value };
-            fetch('http://solana-hackathon-api.supacharge.io:3000/addchannels', {
+            fetch('https://solana-hackathon-api.supacharge.io:3000/addchannels', {
                 method: 'POST',
                 body: JSON.stringify(payload),
                 headers: {
@@ -988,7 +988,7 @@ export default defineComponent({
                 showModalStart.value = false;
                 let payload = {};
 
-                fetch('http://solana-hackathon-api.supacharge.io:3000/refreshlist', {
+                fetch('https://solana-hackathon-api.supacharge.io:3000/refreshlist', {
                     method: 'POST',
                     body: JSON.stringify(payload),
                     headers: {
@@ -1049,7 +1049,7 @@ export default defineComponent({
                     message: message,
                     channelAddress: roomId
                 };
-                fetch('http://solana-hackathon-api.supacharge.io:3000/sendmessage', {
+                fetch('https://solana-hackathon-api.supacharge.io:3000/sendmessage', {
                     method: 'POST',
                     body: JSON.stringify(payload),
                     headers: {

@@ -144,7 +144,7 @@ let payload = {walletAddress: store.wallet?.publicKey.toBase58(), timestamp: tim
     console.log(payload)  
 
 
-fetch("http://solana-hackathon-api.supacharge.io:3000/signin",
+fetch("https://solana-hackathon-api.supacharge.io:3000/signin",
 {
     method: "POST",
     body: JSON.stringify(payload),
